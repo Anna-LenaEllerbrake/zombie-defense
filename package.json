@@ -1,0 +1,30 @@
+{
+  "name": "zombie-defense",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anna-LenaEllerbrake/zombie-defense.git"
+  },
+  "author": "team2",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anna-LenaEllerbrake/zombie-defense/issues"
+  },
+  "homepage": "https://github.com/Anna-LenaEllerbrake/zombie-defense#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/node": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "nodemon": "^2.0.4"
+  }
+}
