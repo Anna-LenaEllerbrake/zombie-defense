@@ -8,7 +8,7 @@ import Order from './models/Order'
 const PORT = 2058
 const app = express()
 
-app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 mongoose.connect('mongodb://localhost:27017/zombie-defense', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -21,8 +21,22 @@ db.once('open', () =>
   console.log('Mongoose running -> we are the best team evaaaaaa! <3')
 )
 
-app.get('/marco', (request, response) => {
-  response.send('polo')
+app.get('/customer', (request, response) => {
+  Customer.find({})
+    .then((data) => response.json(data))
+    .catch((err) => console.log(err))
+})
+
+app.get('/order', (request, response) => {
+  Order.find({})
+    .then((data) => response.json(data))
+    .catch((err) => console.log(err))
+})
+
+app.get('/product', (request, response) => {
+  Product.find({})
+    .then((data) => response.json(data))
+    .catch((err) => console.log(err))
 })
 
 app.listen(PORT, console.log(`Server listening to http://localhost:${PORT}`))
