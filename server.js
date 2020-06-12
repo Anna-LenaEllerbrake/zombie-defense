@@ -27,7 +27,7 @@ app.get('/customer', (request, response) => {
     .catch((error) => console.log(error))
 })
 
-app.post('/create', (request, response) => {
+app.post('/customer', (request, response) => {
   const newCustomer = request.body
 
   Customer.create(newCustomer)
@@ -43,8 +43,24 @@ app.put('/customer/:id', (request, response) => {
     .catch((error) => console.log(error))
 })
 
+app.delete('/customer/:id', (request, response) => {
+  const id = request.params.id
+  const updatedCustomer = request.body
+  Customer.findByIdAndRemove({ _id: id })
+    .then((data) => response.json(data))
+    .catch((error) => console.log(error))
+})
+
 app.get('/order', (request, response) => {
   Order.find({})
+    .then((data) => response.json(data))
+    .catch((error) => console.log(error))
+})
+
+app.put('/order/:id', (request, response) => {
+  const id = request.params.id
+  const updatedOrder = request.body
+  Order.findByIdAndUpdate({ _id: id }, updatedOrder, { new: true })
     .then((data) => response.json(data))
     .catch((error) => console.log(error))
 })
