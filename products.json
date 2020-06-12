@@ -1,0 +1,29 @@
+[{
+  "_id": {
+    "$oid": "5ee39d9e10b7ebe50f806497"
+  },
+  "name": "Chainsaw",
+  "price": {
+    "$numberDecimal": "300"
+  },
+  "description": "Best tool for killing zombies, must have!!!",
+  "available": true
+},{
+  "_id": {
+    "$oid": "5ee39e4310b7ebe50f806498"
+  },
+  "name": "Baseball Bat",
+  "price": {
+    "$numberDecimal": "80"
+  },
+  "description": "Best way to crunch heads, all time favorite <3",
+  "available": true
+},{
+  "_id": {
+    "$oid": "5ee39ec610b7ebe50f806499"
+  },
+  "name": "Baked Beans",
+  "price": "5",
+  "description": "Dont forget to eat!",
+  "available": true
+}]

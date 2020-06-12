@@ -6,24 +6,20 @@
   "email": "martin@test.de"
 },{
   "_id": {
-    "$oid": "5ee36cb3de4a74ce84f65fac"
-  },
-  "email": "max@students-companion-app.de",
-  "name": "Max Meyer"
-},{
-  "_id": {
     "$oid": "5ee36cd0de4a74ce84f65fad"
   },
   "email": "anna@zombie.de",
   "name": "Anna"
 },{
   "_id": {
-    "$oid": "5ee36cdcde4a74ce84f65fae"
-  }
-},{
-  "_id": {
     "$oid": "5ee36d01de4a74ce84f65faf"
   },
   "name": "Stephie",
   "email": "stephie@students-companion-app.de"
+},{
+  "_id": {
+    "$oid": "5ee39b2dbe8cafe72e4833a4"
+  },
+  "name": "Max Dornröschen",
+  "email": "dornroeschen@max.de"
 }]
