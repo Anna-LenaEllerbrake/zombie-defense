@@ -24,19 +24,35 @@ db.once('open', () =>
 app.get('/customer', (request, response) => {
   Customer.find({})
     .then((data) => response.json(data))
-    .catch((err) => console.log(err))
+    .catch((error) => console.log(error))
+})
+
+app.post('/create', (request, response) => {
+  const newCustomer = request.body
+
+  Customer.create(newCustomer)
+    .then((data) => response.json(data))
+    .catch((error) => console.log(error))
+})
+
+app.put('/customer/:id', (request, response) => {
+  const id = request.params.id
+  const updatedCustomer = request.body
+  Customer.findByIdAndUpdate({ _id: id }, updatedCustomer, { new: true })
+    .then((data) => response.json(data))
+    .catch((error) => console.log(error))
 })
 
 app.get('/order', (request, response) => {
   Order.find({})
     .then((data) => response.json(data))
-    .catch((err) => console.log(err))
+    .catch((error) => console.log(error))
 })
 
 app.get('/product', (request, response) => {
   Product.find({})
     .then((data) => response.json(data))
-    .catch((err) => console.log(err))
+    .catch((error) => console.log(error))
 })
 
 app.listen(PORT, console.log(`Server listening to http://localhost:${PORT}`))
