@@ -1,4 +1,4 @@
-import express from 'express'
+import express, { json } from 'express'
 import bodyParser from 'express'
 import mongoose from 'mongoose'
 import Product from './models/Product'
@@ -9,7 +9,7 @@ import Item from './models/Item'
 const PORT = 2058
 const app = express()
 
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser).json
 mongoose.connect('mongodb://localhost:27017/zombie-defense', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -59,11 +59,21 @@ app.get('/order', (request, response) => {
 })
 
 app.post('/order', (request, response) => {
-  const newOrder = request.body
+  const order = new Order({
+    _id: mongoose.Types.ObjectId(),
+    items: request.body.ItemId,
+    quantity: request.body.quantity,
+    
+  });
+  order
+  .save()
+  .then(result => {
+  console.log(result);
+  response.status(201).json(result)
+})
   
-  Order.create(newOrder)
-    .then((data) => response.json(data))
-    .catch((error) => console.log(error))
+  .catch((error) => console.log(error))
+
 })
 
 

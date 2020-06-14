@@ -5,13 +5,15 @@ import Item from './Item'
 
 
 const orderSchema = new mongoose.Schema({
-  items: [{ type: mongoose.Schema.ObjectId, ref: 'Item' }],
+  _id: mongoose.Schema.Types.ObjectId,
+  items: { type: mongoose.Schema.Types.ObjectId, ref: 'Item' },
   customer_id: {
-    type: mongoose.Schema.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     ref: 'Customer',
+    required: true, 
   },
   created_datetime: { type: Date, /*default: newDate*/ },
-  total_sum: { type: Number },
+  total_sum: { type: Number},
 })
 
 module.exports = mongoose.model('Order', orderSchema)
