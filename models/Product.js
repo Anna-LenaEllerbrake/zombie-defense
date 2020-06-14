@@ -6,4 +6,5 @@ const productSchema = new mongoose.Schema({
   description: { type: String },
   available: { type: Boolean },
 })
-module.exports = mongoose.model('testProduct', productSchema)
+module.exports = mongoose.model('Product', productSchema)
+//export const mongooseProduct = mongoose.model('Product', productSchema)

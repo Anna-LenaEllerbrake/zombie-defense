@@ -4,6 +4,7 @@ import mongoose from 'mongoose'
 import Product from './models/Product'
 import Customer from './models/Customer'
 import Order from './models/Order'
+import Item from './models/Item'
 
 const PORT = 2058
 const app = express()
@@ -57,13 +58,14 @@ app.get('/order', (request, response) => {
     .catch((error) => console.log(error))
 })
 
-app.put('/order/:id', (request, response) => {
-  const id = request.params.id
-  const updatedOrder = request.body
-  Order.findByIdAndUpdate({ _id: id }, updatedOrder, { new: true })
+app.post('/order', (request, response) => {
+  const newOrder = request.body
+  
+  Order.create(newOrder)
     .then((data) => response.json(data))
     .catch((error) => console.log(error))
 })
+
 
 app.get('/product', (request, response) => {
   Product.find({})
