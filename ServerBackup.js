@@ -63,19 +63,15 @@ app.post('/order', (request, response) => {
     _id: mongoose.Types.ObjectId(),
     items: request.body.ItemId,
     quantity: request.body.quantity,
-    
-  });
-  order
-  .save()
-  .then(result => {
-  console.log(result);
-  response.status(201).json(result)
-})
-  
-  .catch((error) => console.log(error))
+  })
+  Order.save()
+    .then((result) => {
+      console.log(result)
+      response.status(201).json(result)
+    })
 
+    .catch((error) => console.log(error))
 })
-
 
 app.get('/product', (request, response) => {
   Product.find({})
