@@ -7,7 +7,8 @@ mongoose.set('debug', true);
 export const productModel = mongoose.model('products', {
     name: String,
     price: Number,
-    description: String
+    description: String,
+    imageURL: String
 })
 
 export const customerModel = mongoose.model('customers', {
