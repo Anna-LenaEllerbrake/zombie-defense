@@ -4,26 +4,97 @@
   },
   "name": "Chainsaw",
   "price": {
-    "$numberDecimal": "300"
+    "$numberDecimal": "300.00"
   },
   "description": "Best tool for killing zombies, must have!!!",
-  "available": true
+  "available": true,
+  "imageURL": "http://localhost:2058/images/Chainsaw.png"
 },{
   "_id": {
     "$oid": "5ee39e4310b7ebe50f806498"
   },
   "name": "Baseball Bat",
   "price": {
-    "$numberDecimal": "80"
+    "$numberDecimal": "80.00"
   },
-  "description": "Best way to crunch heads, all time favorite <3",
-  "available": true
+  "description": "Best way to crunch heads, all time favourite <3",
+  "available": true,
+  "imageURL": "http://localhost:2058/images/Baseball_bat.jpg"
 },{
   "_id": {
     "$oid": "5ee39ec610b7ebe50f806499"
   },
   "name": "Baked Beans",
-  "price": "5",
+  "price": {
+    "$numberDecimal": "2.99"
+  },
   "description": "Dont forget to eat!",
-  "available": true
+  "available": true,
+  "imageURL": "http://localhost:2058/images/Baked_beans.jpg"
+},{
+  "_id": {
+    "$oid": "5eee42701d4e4494db444e75"
+  },
+  "name": "Survival Car",
+  "price": {
+    "$numberDecimal": "120000.99"
+  },
+  "description": "On the highway to hell!",
+  "available": "true",
+  "imageURL": "http://localhost:2058/images/zombie_kit.jpg"
+},{
+  "_id": {
+    "$oid": "5eee434c1d4e4494db444e76"
+  },
+  "name": "Survival Hammock Tent",
+  "price": {
+    "$numberDecimal": "894.99"
+  },
+  "description": "Your home in the trees, your bed in the clouds.",
+  "available": "true",
+  "imageURL": "http://localhost:2058/images/Tent_hammock.jpg"
+},{
+  "_id": {
+    "$oid": "5eee444b1d4e4494db444e77"
+  },
+  "name": "Rabbit Recipes for the ZOMBIE Apocalypse",
+  "price": {
+    "$numberDecimal": "24.99"
+  },
+  "description": "How to cook a rabbit with your camping equipment.",
+  "available": "true",
+  "imageURL": "http://localhost:2058/images/Recipe_book.jpg"
+},{
+  "_id": {
+    "$oid": "5eee45841d4e4494db444e78"
+  },
+  "name": "Zombie Trap",
+  "price": {
+    "$numberDecimal": "399.98"
+  },
+  "description": "Catch your Zombie with your brand new Zombie Trap",
+  "available": "true",
+  "imageURL": "http://localhost:2058/images/Zombie_trap.jpg"
+},{
+  "_id": {
+    "$oid": "5eee48291d4e4494db444e79"
+  },
+  "name": "Crossbow",
+  "price": {
+    "$numberDecimal": "1239.99"
+  },
+  "description": "Perfect weapon for hunting rabbits and shooting a zombie in the head!",
+  "available": "true",
+  "imageURL": "http://localhost:2058/images/Crossbow.jpg"
+},{
+  "_id": {
+    "$oid": "5eee49461d4e4494db444e7a"
+  },
+  "name": "Swiss Army Knife",
+  "price": {
+    "$numberDecimal": "999.99"
+  },
+  "description": "The perfect survival gadget for the apocalypse. ",
+  "available": "true",
+  "imageURL": "http://localhost:2058/images/Schweizer_taschenmesser.jpg"
 }]
