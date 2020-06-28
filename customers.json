@@ -2,24 +2,12 @@
   "_id": {
     "$oid": "5ee364c9be9e49719e683d73"
   },
-  "name": "Martin Meyer",
-  "email": "martin@test.de"
-},{
-  "_id": {
-    "$oid": "5ee36cd0de4a74ce84f65fad"
+  "firstname": "Martin",
+  "lastname": "Meyer",
+  "lifestate": "alive",
+  "birthdate": {
+    "$date": "1980-07-05T22:00:00Z"
   },
-  "email": "anna@zombie.de",
-  "name": "Anna"
-},{
-  "_id": {
-    "$oid": "5ee36d01de4a74ce84f65faf"
-  },
-  "name": "Stephie",
-  "email": "stephie@students-companion-app.de"
-},{
-  "_id": {
-    "$oid": "5ee39b2dbe8cafe72e4833a4"
-  },
-  "name": "Max Dornröschen",
-  "email": "dornroeschen@max.de"
+  "email": "martin@test.de",
+  "password": "irgendeinpasswort"
 }]

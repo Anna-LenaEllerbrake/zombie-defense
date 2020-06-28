@@ -13,6 +13,6 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use('/customers', customerRouter)
 app.use('/products', productRouter)
 app.use('/orders', orderRouter)
-app.use(express.static('public'))
+app.use(express.static('public')) 
 
 app.listen(PORT, console.log(`Server listening to http://localhost:${PORT}`))
