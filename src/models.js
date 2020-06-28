@@ -12,8 +12,12 @@ export const productModel = mongoose.model('products', {
 })
 
 export const customerModel = mongoose.model('customers', {
-    name: String,
-    email: String
+    firstname: String,
+    lastname: String,
+    lifestate: String,
+    birthdate: Date,
+    email: String,
+    password: String,
 })
 
 export const orderModel = mongoose.model('orders', {
